@@ -1,0 +1,1 @@
+import MonacoEditor from "@manaco"
