@@ -1,5 +1,4 @@
 import './code-editor.css'
-import './syntax.css'
 import { useRef } from 'react'
 import ManacoEditor, { EditorDidMount, monaco } from '@monaco-editor/react';
 import prettier from 'prettier';
@@ -30,12 +29,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
       codeShift,
       monacoEditor
     )
-    highlighter.highLightOnDidChangeModelContent(
-      () => { },
-      () => { },
-      undefined,
-      () => { },
-    )
+    highlighter.higLightOnDidChangeModelContent()
 
   }
 

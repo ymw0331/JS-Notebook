@@ -1,7 +1,6 @@
 import './code-editor.css'
-import './syntax.css'
 import { useRef } from 'react'
-import ManacoEditor, { EditorDidMount, monaco } from '@monaco-editor/react';
+import ManacoEditor, { EditorDidMount } from '@monaco-editor/react';
 import prettier from 'prettier';
 import parser from 'prettier/parser-babel'
 import codeShift from 'jscodeshift';
@@ -26,15 +25,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
 
     const highlighter = new Highlighter(
       // @ts-ignore //ignore type check
-      window.monaco,
-      codeShift,
-      monacoEditor
-    )
-    highlighter.highLightOnDidChangeModelContent(
-      () => { },
-      () => { },
-      undefined,
-      () => { },
+      window.monaco
     )
 
   }
