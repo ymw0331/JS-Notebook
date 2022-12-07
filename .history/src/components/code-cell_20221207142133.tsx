@@ -6,7 +6,7 @@ import Resizable from './resizable'
 
 const CodeCell = () => {
   const [code, setCode] = useState('')
-  const [err, setErr] = useState('')
+  const [error, ]
   const [input, setInput] = useState('')
 
   //bundling in every second
@@ -14,7 +14,6 @@ const CodeCell = () => {
     const timer = setTimeout(async () => {
       const output = await bundle(input)
       setCode(output.code)
-      setErr(output.err)
     }, 750)
 
     return () => {
@@ -32,7 +31,7 @@ const CodeCell = () => {
             onChange={(value) => setInput(value)}
           />
         </Resizable>
-        <Preview code={code} err={err} />
+        <Preview code={code} />
       </div >
     </Resizable >
   )

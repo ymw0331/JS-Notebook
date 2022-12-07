@@ -24,20 +24,18 @@ const bundle = async (rawCode: string) => {
         global: 'window',
       },
     });
-    return {
-      code: result.outputFiles[0].text,
-      err: '',
-    };
   } catch (err) {
     if (err instanceof Error) {
       return {
-        code: '',
+        code: "",
         err: err.message,
       };
     } else {
       throw err;
     }
   }
+  }
+  return result.outputFiles[0].text;
 };
 
 export default bundle;

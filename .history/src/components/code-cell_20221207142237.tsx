@@ -32,7 +32,7 @@ const CodeCell = () => {
             onChange={(value) => setInput(value)}
           />
         </Resizable>
-        <Preview code={code} err={err} />
+        <Preview code={code} bundlingStatus={err} />
       </div >
     </Resizable >
   )
