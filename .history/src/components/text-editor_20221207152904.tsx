@@ -1,0 +1,21 @@
+import { useState } from "react";
+import MDEditor from "@uiw/react-md-editor";
+
+const TextEditor: React.FC = () => {
+  const [editing, setEditing] = useState(true)
+
+  if (editing) {
+    return (
+      <div>
+        <MDEditor />
+      </div>
+    )
+  }
+  return (
+    <div>
+      <MDEditor.Markdown source={'# Header'} />
+    </div>
+  )
+}
+
+export default TextEditor
