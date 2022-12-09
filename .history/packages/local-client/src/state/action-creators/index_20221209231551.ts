@@ -1,0 +1,1 @@
+if (err instanceof Error) {
