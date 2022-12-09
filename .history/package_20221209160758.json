@@ -6,8 +6,5 @@
   ],
   "devDependencies": {
     "lerna": "^6.1.0"
-  },
-  "scripts": {
-    "start": "lerna run start --parallel"
   }
 }
