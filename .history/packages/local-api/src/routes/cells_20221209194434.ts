@@ -1,0 +1,24 @@
+import express from 'express';
+import fs from 'fs/promises';
+
+export const createCellsRouter = (filename: string, dir: string) => {
+  const router = express.Router();
+
+  router.get('/cells', async (req, res) => {
+    // Make sure the cell storage files exists
+    // If it does not exists, add in a default list of cells
+    // Read the file
+    // Parse a list of cells out of it
+    // Send list of cells back to browser
+  });
+
+  router.post('/cells', async (req, res) => {
+    // Take the list of cells from the request obj
+    // serialize them
+    const { cells } = req.body;
+
+    // Write the cells into the files
+  });
+
+  return router;
+};
