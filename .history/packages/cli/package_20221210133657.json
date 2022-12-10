@@ -1,0 +1,25 @@
+{
+  "name": "jsnote-ymw",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "@jsnote-ymw/local-api": "^1.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.11.12",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": ""
+  }
+}
