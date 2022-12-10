@@ -1,6 +1,6 @@
 {
   "name": "@jsnote-ymw/local-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "files": [
     "dist"
@@ -21,7 +21,7 @@
     "prepublishOnly": "tsc"
   },
   "dependencies": {
-    "@jsnote-ymw/local-client": "^1.0.0",
+    "@jsnote-ymw/local-client": "^1.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"

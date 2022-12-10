@@ -1,6 +1,6 @@
 {
   "name": "jsnote-ymw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "bin": "dist/index.js",
   "publishConfig": {
@@ -8,13 +8,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@jsnote-ymw/local-client": "^1.0.0"
+    "@jsnote-ymw/local-client": "^1.0.1"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
-    "@jsnote-ymw/local-api": "^1.0.0",
+    "@jsnote-ymw/local-api": "^1.0.1",
     "@types/node": "^18.11.12",
     "commander": "^9.4.1",
     "esbuild": "0.8.26",
