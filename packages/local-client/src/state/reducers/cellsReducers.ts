@@ -1,4 +1,4 @@
-import produce from 'immer';
+import { produce } from 'immer';
 import { ActionType } from '../action-types';
 import { Action } from '../actions';
 import { Cell } from '../cell';
@@ -38,6 +38,7 @@ const reducer = produce((state: CellsState = initialState, action: Action) => {
         acc[cell.id] = cell;
         return acc;
       }, {} as CellsState['data']);
+      state.loading = false;
 
       return state;
 

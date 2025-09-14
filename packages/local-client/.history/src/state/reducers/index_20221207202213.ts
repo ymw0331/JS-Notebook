@@ -1,1 +1,0 @@
-import cellsReducer from './cellsReducrs';

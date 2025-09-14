@@ -1,3 +1,0 @@
-const CellList : React.FC = () =>{
-  
-}
