@@ -1,5 +1,5 @@
 {
-  "name": "jsnote-ymw",
+  "name": "js-notebook-cli",
   "version": "1.0.1",
   "description": "",
   "bin": "dist/index.js",
@@ -8,13 +8,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@jsnote-ymw/local-client": "^1.0.1"
+    "@js-notebook/local-client": "^1.0.1"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
-    "@jsnote-ymw/local-api": "^1.0.1",
+    "@js-notebook/local-api": "^1.0.1",
     "@types/node": "^24.3.3",
     "commander": "^14.0.0",
     "esbuild": "^0.25.9",

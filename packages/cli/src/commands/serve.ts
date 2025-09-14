@@ -1,6 +1,6 @@
 import path from 'path';
 import { Command } from 'commander';
-import { serve } from '@jsnote-ymw/local-api';
+import { serve } from '@js-notebook/local-api';
 
 const isProduction = process.env.NODE_ENV === 'production';
 // undefined if false as production, dont use proxy

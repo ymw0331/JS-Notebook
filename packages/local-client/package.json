@@ -1,5 +1,5 @@
 {
-  "name": "@jsnote-ymw/local-client",
+  "name": "@js-notebook/local-client",
   "version": "1.0.1",
   "publishConfig": {
     "access": "public"

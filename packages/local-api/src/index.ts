@@ -23,7 +23,7 @@ export const serve = (
     );
   } else {
     const packagePath = require.resolve(
-      '@jsnote-ymw/local-client/build/index.html'
+      '@js-notebook/local-client/build/index.html'
     );
     app.use(express.static(path.dirname(packagePath)));
   }
