@@ -15,7 +15,7 @@ const serve = (port, filename, dir, useProxy) => {
         app.use((0, http_proxy_middleware_1.createProxyMiddleware)({
             target: 'http://localhost:3000',
             ws: true,
-            logLevel: 'silent',
+            logger: console,
         }));
     }
     else {
@@ -24,7 +24,7 @@ const serve = (port, filename, dir, useProxy) => {
     }
     // async await syntax
     return new Promise((resolve, reject) => {
-        app.listen(port, resolve).on('error', reject);
+        app.listen(port, () => resolve()).on('error', reject);
     });
 };
 exports.serve = serve;

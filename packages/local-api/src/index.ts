@@ -18,7 +18,7 @@ export const serve = (
       createProxyMiddleware({
         target: 'http://localhost:3000',
         ws: true,
-        logLevel: 'silent',
+        logger: console,
       })
     );
   } else {
@@ -30,6 +30,6 @@ export const serve = (
 
   // async await syntax
   return new Promise<void>((resolve, reject) => {
-    app.listen(port, resolve).on('error', reject);
+    app.listen(port, () => resolve()).on('error', reject);
   });
 };

@@ -15,8 +15,8 @@
   ],
   "devDependencies": {
     "@jsnote-ymw/local-api": "^1.0.1",
-    "@types/node": "^18.11.12",
-    "commander": "^9.4.1",
+    "@types/node": "^24.3.3",
+    "commander": "^14.0.0",
     "esbuild": "^0.25.9",
     "typescript": "^5.9.2"
   },
