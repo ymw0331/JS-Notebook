@@ -1,0 +1,36 @@
+[build]
+  base = "."
+  publish = "packages/local-client/build"
+  command = "npm install && cd packages/local-client && npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--production=false"
+
+[dev]
+  command = "cd packages/local-client && npm start"
+  port = 3000
+  publish = "packages/local-client/build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "packages/local-api/dist"
+  node_bundler = "esbuild"
+
+# Headers for CORS and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

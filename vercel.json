@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "packages/local-client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "packages/local-client/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/packages/local-client/build/$1"
+    }
+  ],
+  "functions": {
+    "packages/local-api/dist/index.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "outputDirectory": "packages/local-client/build",
+  "installCommand": "npm install",
+  "buildCommand": "cd packages/local-client && npm run build",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "github": {
+    "silent": true
+  }
+}
