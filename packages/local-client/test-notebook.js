@@ -1,0 +1,1 @@
+[{"content":"const helperFunction = () => {\n    console.log(\"Hello how are you doiing\")\n}\n","type":"code","id":"ekg0d"}]
