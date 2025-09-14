@@ -23,7 +23,7 @@ exports.serveCommand = new commander_1.Command()
     .command('serve [filename]')
     .description('Open a file for editing')
     .option('-p, --port <number>', 'port to run server on', '4005')
-    .action((filename = 'notebook.js', options) => __awaiter(void 0, void 0, void 0, function* () {
+    .action((...args_1) => __awaiter(void 0, [...args_1], void 0, function* (filename = 'notebook.js', options) {
     try {
         const dir = path_1.default.join(process.cwd(), path_1.default.dirname(filename));
         yield (0, local_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), dir, !isProduction);
